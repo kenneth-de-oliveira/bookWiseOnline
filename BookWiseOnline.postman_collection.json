@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "fbccc890-ad70-4d28-879b-6f822c20f160",
+		"name": "BookWiseOnline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13662308",
+		"_collection_link": "https://winter-equinox-571706.postman.co/workspace/Estudo~ade54a94-8d16-4e60-80cd-49276704e132/collection/13662308-fbccc890-ad70-4d28-879b-6f822c20f160?action=share&source=collection_link&creator=13662308"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"70943418496\",\r\n    \"name\": \"kenneth\",\r\n    \"age\": \"24\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiGateway}}/students",
+							"host": [
+								"{{apiGateway}}"
+							],
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDocument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiGateway}}/students?document=70943418496",
+							"host": [
+								"{{apiGateway}}"
+							],
+							"path": [
+								"students"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "70943418496"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiGateway}}/categories/1",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiGateway}}/categories",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Informática\",\r\n    \"name\": \"Livros de TI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiGateway}}/categories",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "book",
+					"item": [
+						{
+							"name": "findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiGateway}}/books/1",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"books",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiGateway}}/books/?category=1",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"books",
+										""
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"HTML5 e CSS3: guia prático e visual\",\r\n    \"authorName\": \" Elizabeth Castro\",\r\n    \"text\": \"Lorem Ipsum\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiGateway}}/books?category=1",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reserve",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{apiGateway}}/books/1/reserve",
+									"host": [
+										"{{apiGateway}}"
+									],
+									"path": [
+										"books",
+										"1",
+										"reserve"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BookInventory",
+			"item": [
+				{
+					"name": "reserve",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apiGateway}}/reservations?document=70943418496&bookId=1",
+							"host": [
+								"{{apiGateway}}"
+							],
+							"path": [
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "70943418496"
+								},
+								{
+									"key": "bookId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll by Document",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiGateway}}/reservations?document=70943418496",
+							"host": [
+								"{{apiGateway}}"
+							],
+							"path": [
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "70943418496"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (responseCode.code >= 200 && responseCode.code < 300) {\r",
+							"\r",
+							"    var json = JSON.parse(responseBody);\r",
+							"\r",
+							"    postman.setEnvironmentVariable('token', json.access_token);\r",
+							"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "bookWiseOnline",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "7U3yK8mCpNwtqWIr5644LJZFEzD3nBnV",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{keycloack}}/bookWiseOnline/protocol/openid-connect/token",
+					"host": [
+						"{{keycloack}}"
+					],
+					"path": [
+						"bookWiseOnline",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "t"
+		}
+	]
+}
