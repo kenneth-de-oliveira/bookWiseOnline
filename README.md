@@ -1,6 +1,6 @@
 **BookWiseOnline** 
 ========================================================================
-This Microservice is a ìfictitiousî digital book inventory project proposal developed as a form of training for Minsait "Advanced Java Backend: Creating High-Performance Microservices" training, whose main objective is to offer main services, such as: reserving books, consult reserved books and book cruds and students.
+This Microservice is a ‚Äúfictitious‚Äù digital book inventory project proposal developed as a form of training for Minsait "Advanced Java Backend: Creating High-Performance Microservices" training, whose main objective is to offer main services, such as: reserving books, consult reserved books and book cruds and students.
 
 **Some of the resources used**
 
@@ -39,7 +39,7 @@ Project configuration
 - Java 17
 - Maven 3
 
-Exemple of execution
+Example of execution
 ========================================================================
 
 Create a new student **POST**: localhost:8080/students
@@ -51,10 +51,10 @@ Create a new student **POST**: localhost:8080/students
 }
 ```
 
-Create a new book **POST**: localhost:8080/students
+Create a new book **POST**: localhost:8080/books
 ```json
 {
-  "title": "HTML5 e CSS3: guia pr·tico e visual",
+  "title": "HTML5 e CSS3: guia pr√°tico e visual",
   "authorName": " Elizabeth Castro",
   "text": "Lorem Ipsum"
 }
@@ -63,7 +63,7 @@ Create a new book **POST**: localhost:8080/students
 Create a new category **POST**: localhost:8080/categories
 ```json
 {
-  "description": "Inform·tica",
+  "description": "Inform√°tica",
   "name": "Livros de TI"
 }
 ```
