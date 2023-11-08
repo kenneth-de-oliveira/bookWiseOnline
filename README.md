@@ -68,10 +68,10 @@ Create a new category **POST**: localhost:8080/categories
 }
 ```
 
-Listing all categories **GET**: ``` localhost:8080/categories/```
+Listing all categories **GET**: ``` localhost:8080/categories```
 
 Find Category by Id **GET**: ``` http://localhost:8080/categories/1 ```
 
-Listing all books **GET**: ``` localhost:8080/books/```
+Listing all books **GET**: ``` localhost:8080/books```
 
 Find book by Id **GET**: ``` http://localhost:8080/books/1 ```
