@@ -1,6 +1,6 @@
 **BookWiseOnline** 
 ========================================================================
-This Microservice is a “fictitious” digital book inventory project proposal developed as a form of training for Minsait "Advanced Java Backend: Creating High-Performance Microservices" training, whose main objective is to offer main services, such as: reserving books, consult reserved books and book cruds and students.
+This Microservice is a “fictitious” digital book inventory project proposal developed as a form of training for Minsait "Java Backend Avançado: Criando Microserviços de alta perfomance" training, whose main objective is to offer main services, such as: reserving books, consult reserved books and book cruds and students.
 
 **Some of the resources used**
 
