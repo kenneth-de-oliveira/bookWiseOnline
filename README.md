@@ -45,9 +45,9 @@ Example of execution
 Create a new student **POST**: localhost:8080/students
 ```json
 {
-  "document": "70943418496",
+  "document": "74480757058",
   "name": "kenneth",
-  "age": "24"
+  "age": "25"
 }
 ```
 
